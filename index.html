@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rage Maps – Custom Game Maps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --bg-main: #050505;
+      --bg-panel: #151515;
+      --accent: #d86b32;
+      --accent-soft: #f29b4c;
+      --text-main: #f5f5f5;
+      --text-muted: #aaaaaa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #262626 0, #050505 55%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1200px;
+      padding: 2rem;
+    }
+
+    .hero {
+      border-radius: 20px;
+      background: linear-gradient(145deg, #090909, #181818);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7);
+      padding: 3rem 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow:
+        0 0 35px rgba(216, 107, 50, 0.45),
+        0 18px 40px rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.7rem, 3.6vw + 1.2rem, 3.6rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #d2d2d2;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      transition: all 0.18s ease-out;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      color: #060606;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: #333;
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent-soft);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.75);
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-logo-wrap">
+        <!-- Make sure this file exists: images/rage-maps-logo.png -->
+        <img
+          src="images/rage-maps-logo.png"
+          alt="Rage Maps logo – blueprint and hammer"
+          class="hero-logo"
+        />
+      </div>
+
+      <div class="hero-text">
+        <h1>Rage Maps</h1>
+        <h2>Custom Game Maps</h2>
+
+        <p>
+          Hand-crafted Rust and sandbox maps built by an aircraft mechanic who
+          loves survival, building, and world-creation games. Every map is tuned
+          for performance, balance, and unforgettable adventures.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#maps" class="btn btn-primary">Browse Maps</a>
+          <a href="#contact" class="btn btn-ghost">Commission a Custom Map</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      © 2025 Rage Maps. All rights reserved.
+    </p>
+  </div>
+</body>
+</html>
